@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+
 
 namespace RestaurantCsharpSystem
 {
@@ -57,6 +59,32 @@ namespace RestaurantCsharpSystem
             this.Hide();
             new frmPayroll().ShowDialog();
             this.Close();
+        }
+
+       
+
+        private void frmUsers_Load(object sender, EventArgs e)
+        {
+            getUsers();
+        }
+        private void getUsers() {
+            string connectionString = @"Data Source=DESKTOP\SQLEXPRESS; Initial Catalog=Restaurant_DB; Integrated Security=SSPI;";
+            SqlConnection conn = new SqlConnection(connectionString);
+            SqlDataAdapter adapter;
+            string query = "SELECT * FROM Users";
+            DataTable dataTable = new DataTable();
+            try
+            {
+                conn.Open();
+                adapter = new SqlDataAdapter(query, conn);
+                adapter.Fill(dataTable);
+                dataGridView1.DataSource = null;
+                conn.Close();
+                dataGridView1.DataSource = dataTable;
+            } catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "General Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

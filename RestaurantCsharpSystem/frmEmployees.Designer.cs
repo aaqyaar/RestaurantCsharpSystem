@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menusPanel = new System.Windows.Forms.Panel();
             this.payroll_menu = new System.Windows.Forms.Button();
             this.products_menu = new System.Windows.Forms.Button();
@@ -36,8 +40,26 @@
             this.user_menu = new System.Windows.Forms.Button();
             this.dashboard_menu = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.lblDashboard = new System.Windows.Forms.Label();
+            this.btnDelEmp = new System.Windows.Forms.Button();
+            this.btnListEmps = new System.Windows.Forms.Button();
+            this.btnUpdateEmp = new System.Windows.Forms.Button();
+            this.btnCreateEmp = new System.Windows.Forms.Button();
+            this.employeesGridView = new System.Windows.Forms.DataGridView();
+            this.txtEmpSalary = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtEmpAddress = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtEmpPhone = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtSearchEmp = new System.Windows.Forms.TextBox();
+            this.txtEmpID = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtEmpName = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.menusPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // menusPanel
@@ -174,21 +196,247 @@
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
             // 
+            // lblDashboard
+            // 
+            this.lblDashboard.AutoSize = true;
+            this.lblDashboard.Font = new System.Drawing.Font("Public Sans SemiBold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDashboard.Location = new System.Drawing.Point(226, 42);
+            this.lblDashboard.Name = "lblDashboard";
+            this.lblDashboard.Size = new System.Drawing.Size(290, 39);
+            this.lblDashboard.TabIndex = 33;
+            this.lblDashboard.Text = "Employees Directory";
+            // 
+            // btnDelEmp
+            // 
+            this.btnDelEmp.Font = new System.Drawing.Font("Inter", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelEmp.ForeColor = System.Drawing.Color.Black;
+            this.btnDelEmp.Location = new System.Drawing.Point(1227, 517);
+            this.btnDelEmp.Name = "btnDelEmp";
+            this.btnDelEmp.Size = new System.Drawing.Size(124, 46);
+            this.btnDelEmp.TabIndex = 30;
+            this.btnDelEmp.Text = "Delete";
+            this.btnDelEmp.UseVisualStyleBackColor = true;
+            this.btnDelEmp.Click += new System.EventHandler(this.btnDelEmp_Click);
+            // 
+            // btnListEmps
+            // 
+            this.btnListEmps.Font = new System.Drawing.Font("Inter", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListEmps.ForeColor = System.Drawing.Color.Black;
+            this.btnListEmps.Location = new System.Drawing.Point(1038, 516);
+            this.btnListEmps.Name = "btnListEmps";
+            this.btnListEmps.Size = new System.Drawing.Size(124, 46);
+            this.btnListEmps.TabIndex = 28;
+            this.btnListEmps.Text = "Refresh";
+            this.btnListEmps.UseVisualStyleBackColor = true;
+            this.btnListEmps.Click += new System.EventHandler(this.btnListEmps_Click);
+            // 
+            // btnUpdateEmp
+            // 
+            this.btnUpdateEmp.Font = new System.Drawing.Font("Inter", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateEmp.ForeColor = System.Drawing.Color.Black;
+            this.btnUpdateEmp.Location = new System.Drawing.Point(869, 516);
+            this.btnUpdateEmp.Name = "btnUpdateEmp";
+            this.btnUpdateEmp.Size = new System.Drawing.Size(124, 46);
+            this.btnUpdateEmp.TabIndex = 22;
+            this.btnUpdateEmp.Text = "Update";
+            this.btnUpdateEmp.UseVisualStyleBackColor = true;
+            this.btnUpdateEmp.Click += new System.EventHandler(this.btnUpdateEmp_Click);
+            // 
+            // btnCreateEmp
+            // 
+            this.btnCreateEmp.Font = new System.Drawing.Font("Inter", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreateEmp.ForeColor = System.Drawing.Color.Black;
+            this.btnCreateEmp.Location = new System.Drawing.Point(686, 517);
+            this.btnCreateEmp.Name = "btnCreateEmp";
+            this.btnCreateEmp.Size = new System.Drawing.Size(124, 46);
+            this.btnCreateEmp.TabIndex = 32;
+            this.btnCreateEmp.Text = "Register";
+            this.btnCreateEmp.UseVisualStyleBackColor = true;
+            this.btnCreateEmp.Click += new System.EventHandler(this.btnCreateEmp_Click);
+            // 
+            // employeesGridView
+            // 
+            this.employeesGridView.AllowUserToAddRows = false;
+            this.employeesGridView.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
+            this.employeesGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.employeesGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
+            this.employeesGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Inter", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.employeesGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.employeesGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Inter", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.employeesGridView.DefaultCellStyle = dataGridViewCellStyle3;
+            this.employeesGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
+            this.employeesGridView.Location = new System.Drawing.Point(686, 86);
+            this.employeesGridView.Name = "employeesGridView";
+            this.employeesGridView.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Inter", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.employeesGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.employeesGridView.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
+            this.employeesGridView.RowTemplate.Height = 24;
+            this.employeesGridView.Size = new System.Drawing.Size(665, 425);
+            this.employeesGridView.TabIndex = 31;
+            this.employeesGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.employeesGridView_CellContentClick);
+            // 
+            // txtEmpSalary
+            // 
+            this.txtEmpSalary.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEmpSalary.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmpSalary.Location = new System.Drawing.Point(233, 440);
+            this.txtEmpSalary.Name = "txtEmpSalary";
+            this.txtEmpSalary.Size = new System.Drawing.Size(333, 32);
+            this.txtEmpSalary.TabIndex = 18;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(229, 408);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(121, 24);
+            this.label4.TabIndex = 23;
+            this.label4.Text = "Emp. Salary";
+            // 
+            // txtEmpAddress
+            // 
+            this.txtEmpAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEmpAddress.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmpAddress.Location = new System.Drawing.Point(233, 373);
+            this.txtEmpAddress.Name = "txtEmpAddress";
+            this.txtEmpAddress.Size = new System.Drawing.Size(333, 32);
+            this.txtEmpAddress.TabIndex = 17;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(229, 341);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(140, 24);
+            this.label3.TabIndex = 29;
+            this.label3.Text = "Emp. Address";
+            // 
+            // txtEmpPhone
+            // 
+            this.txtEmpPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEmpPhone.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmpPhone.Location = new System.Drawing.Point(233, 303);
+            this.txtEmpPhone.Name = "txtEmpPhone";
+            this.txtEmpPhone.Size = new System.Drawing.Size(333, 32);
+            this.txtEmpPhone.TabIndex = 16;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(229, 271);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(124, 24);
+            this.label2.TabIndex = 25;
+            this.label2.Text = "Emp. Phone";
+            // 
+            // txtSearchEmp
+            // 
+            this.txtSearchEmp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSearchEmp.Font = new System.Drawing.Font("Inter", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchEmp.Location = new System.Drawing.Point(1018, 40);
+            this.txtSearchEmp.Name = "txtSearchEmp";
+            this.txtSearchEmp.Size = new System.Drawing.Size(333, 40);
+            this.txtSearchEmp.TabIndex = 21;
+            this.txtSearchEmp.TextChanged += new System.EventHandler(this.txtSearchEmp_TextChanged);
+            // 
+            // txtEmpID
+            // 
+            this.txtEmpID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEmpID.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmpID.Location = new System.Drawing.Point(233, 159);
+            this.txtEmpID.Name = "txtEmpID";
+            this.txtEmpID.Size = new System.Drawing.Size(333, 32);
+            this.txtEmpID.TabIndex = 20;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(229, 127);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(82, 24);
+            this.label6.TabIndex = 24;
+            this.label6.Text = "Emp. ID";
+            // 
+            // txtEmpName
+            // 
+            this.txtEmpName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEmpName.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmpName.Location = new System.Drawing.Point(233, 231);
+            this.txtEmpName.Name = "txtEmpName";
+            this.txtEmpName.Size = new System.Drawing.Size(333, 32);
+            this.txtEmpName.TabIndex = 15;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(229, 199);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(118, 24);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Emp. Name";
+            // 
             // frmEmployees
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
             this.ClientSize = new System.Drawing.Size(1382, 598);
+            this.Controls.Add(this.lblDashboard);
+            this.Controls.Add(this.btnDelEmp);
+            this.Controls.Add(this.btnListEmps);
+            this.Controls.Add(this.btnUpdateEmp);
+            this.Controls.Add(this.btnCreateEmp);
+            this.Controls.Add(this.employeesGridView);
+            this.Controls.Add(this.txtEmpSalary);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtEmpAddress);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtEmpPhone);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtSearchEmp);
+            this.Controls.Add(this.txtEmpID);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtEmpName);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.menusPanel);
             this.Font = new System.Drawing.Font("Inter", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
             this.Name = "frmEmployees";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEmployees";
+            this.Load += new System.EventHandler(this.frmEmployees_Load);
             this.menusPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesGridView)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -202,5 +450,22 @@
         private System.Windows.Forms.Button user_menu;
         private System.Windows.Forms.Button dashboard_menu;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label lblDashboard;
+        private System.Windows.Forms.Button btnDelEmp;
+        private System.Windows.Forms.Button btnListEmps;
+        private System.Windows.Forms.Button btnUpdateEmp;
+        private System.Windows.Forms.Button btnCreateEmp;
+        private System.Windows.Forms.DataGridView employeesGridView;
+        private System.Windows.Forms.TextBox txtEmpSalary;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtEmpAddress;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtEmpPhone;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtSearchEmp;
+        private System.Windows.Forms.TextBox txtEmpID;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtEmpName;
+        private System.Windows.Forms.Label label1;
     }
 }

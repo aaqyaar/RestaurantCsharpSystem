@@ -7,11 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using RestaurantCsharpSystem.Database;
+using System.Data.SqlClient;
 
 namespace RestaurantCsharpSystem
 {
     public partial class frmOrders : Form
     {
+        SqlConnection conn = DBConnection.conn;
+        SqlDataReader reader;
+        SqlCommand command;
+        SqlDataAdapter adapter;
+        SqlCommandBuilder commandBuilder;
         public frmOrders()
         {
             InitializeComponent();
@@ -50,6 +57,59 @@ namespace RestaurantCsharpSystem
             this.Hide();
             new frmPayroll().ShowDialog();
             this.Close();
+        }
+
+        private void frmOrders_Load(object sender, EventArgs e)
+        {
+            getEmployees();
+        }
+        private void getEmployees()
+        {
+            conn.Open();
+            try
+            {
+                string query = "EXEC sp_listEmployees";
+                command = new SqlCommand(query, conn);
+                reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    cmbOrderRefEmployee.Items.Add(reader[1].ToString());
+                }
+                reader.Close();
+                conn.Close();
+            } catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "General Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            conn.Close();
+        }
+
+        private void getOrders()
+        {
+            conn.Open();
+            try
+            {     
+                string query = "EXEC sp_listOrders";
+                DataTable dataTable = new DataTable();
+                command = new SqlCommand(query, conn);
+                adapter = new SqlDataAdapter(command);
+                commandBuilder = new SqlCommandBuilder(adapter);
+                dataTable.Clear();
+                adapter.Fill(dataTable);
+                ordersGridView.DataSource = dataTable;
+                ordersGridView.Refresh();
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "General Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            conn.Close();
+        }
+
+        private void btnListOrders_Click(object sender, EventArgs e)
+        {
+            getOrders();
         }
     }
 }
