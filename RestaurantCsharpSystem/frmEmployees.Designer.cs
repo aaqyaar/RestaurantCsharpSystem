@@ -57,6 +57,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtEmpName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.menusPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeesGridView)).BeginInit();
@@ -208,8 +209,9 @@
             // 
             // btnDelEmp
             // 
+            this.btnDelEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelEmp.Font = new System.Drawing.Font("Inter", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelEmp.ForeColor = System.Drawing.Color.Black;
+            this.btnDelEmp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
             this.btnDelEmp.Location = new System.Drawing.Point(1227, 517);
             this.btnDelEmp.Name = "btnDelEmp";
             this.btnDelEmp.Size = new System.Drawing.Size(124, 46);
@@ -220,8 +222,9 @@
             // 
             // btnListEmps
             // 
+            this.btnListEmps.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnListEmps.Font = new System.Drawing.Font("Inter", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListEmps.ForeColor = System.Drawing.Color.Black;
+            this.btnListEmps.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
             this.btnListEmps.Location = new System.Drawing.Point(1038, 516);
             this.btnListEmps.Name = "btnListEmps";
             this.btnListEmps.Size = new System.Drawing.Size(124, 46);
@@ -232,8 +235,9 @@
             // 
             // btnUpdateEmp
             // 
+            this.btnUpdateEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateEmp.Font = new System.Drawing.Font("Inter", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateEmp.ForeColor = System.Drawing.Color.Black;
+            this.btnUpdateEmp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
             this.btnUpdateEmp.Location = new System.Drawing.Point(869, 516);
             this.btnUpdateEmp.Name = "btnUpdateEmp";
             this.btnUpdateEmp.Size = new System.Drawing.Size(124, 46);
@@ -244,8 +248,9 @@
             // 
             // btnCreateEmp
             // 
+            this.btnCreateEmp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreateEmp.Font = new System.Drawing.Font("Inter", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreateEmp.ForeColor = System.Drawing.Color.Black;
+            this.btnCreateEmp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
             this.btnCreateEmp.Location = new System.Drawing.Point(686, 517);
             this.btnCreateEmp.Name = "btnCreateEmp";
             this.btnCreateEmp.Size = new System.Drawing.Size(124, 46);
@@ -260,6 +265,7 @@
             this.employeesGridView.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
             this.employeesGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.employeesGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.employeesGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
             this.employeesGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -299,8 +305,10 @@
             // 
             // txtEmpSalary
             // 
+            this.txtEmpSalary.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
             this.txtEmpSalary.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEmpSalary.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmpSalary.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
             this.txtEmpSalary.Location = new System.Drawing.Point(233, 440);
             this.txtEmpSalary.Name = "txtEmpSalary";
             this.txtEmpSalary.Size = new System.Drawing.Size(333, 32);
@@ -318,8 +326,10 @@
             // 
             // txtEmpAddress
             // 
+            this.txtEmpAddress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
             this.txtEmpAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEmpAddress.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmpAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
             this.txtEmpAddress.Location = new System.Drawing.Point(233, 373);
             this.txtEmpAddress.Name = "txtEmpAddress";
             this.txtEmpAddress.Size = new System.Drawing.Size(333, 32);
@@ -337,8 +347,10 @@
             // 
             // txtEmpPhone
             // 
+            this.txtEmpPhone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
             this.txtEmpPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEmpPhone.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmpPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
             this.txtEmpPhone.Location = new System.Drawing.Point(233, 303);
             this.txtEmpPhone.Name = "txtEmpPhone";
             this.txtEmpPhone.Size = new System.Drawing.Size(333, 32);
@@ -356,8 +368,10 @@
             // 
             // txtSearchEmp
             // 
+            this.txtSearchEmp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
             this.txtSearchEmp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSearchEmp.Font = new System.Drawing.Font("Inter", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchEmp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
             this.txtSearchEmp.Location = new System.Drawing.Point(1018, 40);
             this.txtSearchEmp.Name = "txtSearchEmp";
             this.txtSearchEmp.Size = new System.Drawing.Size(333, 40);
@@ -366,8 +380,10 @@
             // 
             // txtEmpID
             // 
+            this.txtEmpID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
             this.txtEmpID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEmpID.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmpID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
             this.txtEmpID.Location = new System.Drawing.Point(233, 159);
             this.txtEmpID.Name = "txtEmpID";
             this.txtEmpID.Size = new System.Drawing.Size(333, 32);
@@ -385,8 +401,10 @@
             // 
             // txtEmpName
             // 
+            this.txtEmpName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
             this.txtEmpName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEmpName.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmpName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
             this.txtEmpName.Location = new System.Drawing.Point(233, 231);
             this.txtEmpName.Name = "txtEmpName";
             this.txtEmpName.Size = new System.Drawing.Size(333, 32);
@@ -402,6 +420,19 @@
             this.label1.TabIndex = 26;
             this.label1.Text = "Emp. Name";
             // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Inter", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
+            this.button1.Location = new System.Drawing.Point(686, 34);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(166, 46);
+            this.button1.TabIndex = 28;
+            this.button1.Text = "Employees Report";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btnListEmps_Click);
+            // 
             // frmEmployees
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -410,6 +441,7 @@
             this.ClientSize = new System.Drawing.Size(1382, 598);
             this.Controls.Add(this.lblDashboard);
             this.Controls.Add(this.btnDelEmp);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnListEmps);
             this.Controls.Add(this.btnUpdateEmp);
             this.Controls.Add(this.btnCreateEmp);
@@ -467,5 +499,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtEmpName;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }

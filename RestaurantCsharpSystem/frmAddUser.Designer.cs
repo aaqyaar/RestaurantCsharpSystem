@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblDashboard = new System.Windows.Forms.Label();
+            this.lblUser = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
@@ -46,15 +46,15 @@
             this.comboRole = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
-            // lblDashboard
+            // lblUser
             // 
-            this.lblDashboard.AutoSize = true;
-            this.lblDashboard.Font = new System.Drawing.Font("Public Sans SemiBold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDashboard.Location = new System.Drawing.Point(265, 21);
-            this.lblDashboard.Name = "lblDashboard";
-            this.lblDashboard.Size = new System.Drawing.Size(223, 39);
-            this.lblDashboard.TabIndex = 6;
-            this.lblDashboard.Text = "Add a new User";
+            this.lblUser.AutoSize = true;
+            this.lblUser.Font = new System.Drawing.Font("Public Sans SemiBold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.Location = new System.Drawing.Point(265, 21);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(223, 39);
+            this.lblUser.TabIndex = 6;
+            this.lblUser.Text = "Add a new User";
             // 
             // label1
             // 
@@ -230,7 +230,7 @@
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblDashboard);
+            this.Controls.Add(this.lblUser);
             this.Font = new System.Drawing.Font("Inter", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -243,22 +243,21 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblDashboard;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtConfirmPassword;
-        private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnSaveUser;
-        private System.Windows.Forms.ComboBox comboRole;
+        public System.Windows.Forms.Label lblUser;
+        public System.Windows.Forms.TextBox txtName;
+        public System.Windows.Forms.TextBox txtPhone;
+        public System.Windows.Forms.TextBox txtPassword;
+        public System.Windows.Forms.TextBox txtConfirmPassword;
+        public System.Windows.Forms.TextBox txtUsername;
+        public System.Windows.Forms.ComboBox comboRole;
     }
 }

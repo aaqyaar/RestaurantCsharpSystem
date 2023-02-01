@@ -7,11 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using RestaurantCsharpSystem.Database;
+using System.Data.SqlClient;
 
 namespace RestaurantCsharpSystem
 {
     public partial class frmPayroll : Form
     {
+        SqlConnection conn = DBConnection.conn;
+        SqlCommand command;
+        SqlDataReader reader;
         public frmPayroll()
         {
             InitializeComponent();
@@ -51,5 +56,33 @@ namespace RestaurantCsharpSystem
             new frmEmployees().ShowDialog();
             this.Close();
         }
+        private void getEmployees()
+        {
+            conn.Open();
+            try
+            {
+                string query = "EXEC sp_listEmployees";
+                command = new SqlCommand(query, conn);
+                reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    cmbPayrollEmp.Items.Add(reader[1].ToString());
+                }
+                reader.Close();
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "General Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            conn.Close();
+        }
+
+        private void frmPayroll_Load(object sender, EventArgs e)
+        {
+            getEmployees();
+        }
+
+    
     }
 }

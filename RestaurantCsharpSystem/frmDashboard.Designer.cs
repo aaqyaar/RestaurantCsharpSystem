@@ -39,37 +39,39 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDashboard));
             this.lblDashboard = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.total_products_in_store = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.total_orders = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.total_employees = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.menusPanel = new System.Windows.Forms.Panel();
+            this.lblAuthedUser = new System.Windows.Forms.Label();
             this.payroll_menu = new System.Windows.Forms.Button();
+            this.category_menu = new System.Windows.Forms.Button();
             this.products_menu = new System.Windows.Forms.Button();
             this.orders_menu = new System.Windows.Forms.Button();
             this.employees_menu = new System.Windows.Forms.Button();
             this.user_menu = new System.Windows.Forms.Button();
             this.dashboard_menu = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.menusPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblDashboard
@@ -94,21 +96,11 @@
             this.panel1.Size = new System.Drawing.Size(284, 89);
             this.panel1.TabIndex = 1;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::RestaurantCsharpSystem.Properties.Resources.products1;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // total_products_in_store
             // 
             this.total_products_in_store.AutoSize = true;
             this.total_products_in_store.Font = new System.Drawing.Font("Public Sans", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.total_products_in_store.Location = new System.Drawing.Point(180, 43);
+            this.total_products_in_store.Location = new System.Drawing.Point(180, 51);
             this.total_products_in_store.Name = "total_products_in_store";
             this.total_products_in_store.Size = new System.Drawing.Size(80, 34);
             this.total_products_in_store.TabIndex = 0;
@@ -136,21 +128,11 @@
             this.panel2.Size = new System.Drawing.Size(284, 89);
             this.panel2.TabIndex = 1;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::RestaurantCsharpSystem.Properties.Resources.orders1;
-            this.pictureBox2.Location = new System.Drawing.Point(15, 16);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(65, 64);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
             // total_orders
             // 
             this.total_orders.AutoSize = true;
             this.total_orders.Font = new System.Drawing.Font("Public Sans", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.total_orders.Location = new System.Drawing.Point(180, 43);
+            this.total_orders.Location = new System.Drawing.Point(180, 51);
             this.total_orders.Name = "total_orders";
             this.total_orders.Size = new System.Drawing.Size(74, 34);
             this.total_orders.TabIndex = 0;
@@ -171,32 +153,22 @@
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(41)))), ((int)(((byte)(55)))));
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel3.Controls.Add(this.pictureBox3);
-            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.total_employees);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Location = new System.Drawing.Point(868, 94);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(284, 89);
             this.panel3.TabIndex = 1;
             // 
-            // pictureBox3
+            // total_employees
             // 
-            this.pictureBox3.Image = global::RestaurantCsharpSystem.Properties.Resources.products1;
-            this.pictureBox3.Location = new System.Drawing.Point(12, 16);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Public Sans", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(180, 43);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 34);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "2,900";
+            this.total_employees.AutoSize = true;
+            this.total_employees.Font = new System.Drawing.Font("Public Sans", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.total_employees.Location = new System.Drawing.Point(180, 51);
+            this.total_employees.Name = "total_employees";
+            this.total_employees.Size = new System.Drawing.Size(80, 34);
+            this.total_employees.TabIndex = 0;
+            this.total_employees.Text = "2,900";
             // 
             // label5
             // 
@@ -204,9 +176,9 @@
             this.label5.Font = new System.Drawing.Font("Public Sans", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(86, 14);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(174, 34);
+            this.label5.Size = new System.Drawing.Size(198, 34);
             this.label5.TabIndex = 0;
-            this.label5.Text = "Total Products";
+            this.label5.Text = "Total Employees";
             // 
             // chart1
             // 
@@ -263,6 +235,7 @@
             // 
             this.menusPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.menusPanel.Controls.Add(this.payroll_menu);
+            this.menusPanel.Controls.Add(this.category_menu);
             this.menusPanel.Controls.Add(this.products_menu);
             this.menusPanel.Controls.Add(this.orders_menu);
             this.menusPanel.Controls.Add(this.employees_menu);
@@ -276,6 +249,15 @@
             this.menusPanel.Size = new System.Drawing.Size(200, 598);
             this.menusPanel.TabIndex = 3;
             // 
+            // lblAuthedUser
+            // 
+            this.lblAuthedUser.AutoSize = true;
+            this.lblAuthedUser.Font = new System.Drawing.Font("Public Sans SemiBold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAuthedUser.Location = new System.Drawing.Point(992, 22);
+            this.lblAuthedUser.Name = "lblAuthedUser";
+            this.lblAuthedUser.Size = new System.Drawing.Size(0, 39);
+            this.lblAuthedUser.TabIndex = 0;
+            // 
             // payroll_menu
             // 
             this.payroll_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
@@ -285,7 +267,7 @@
             this.payroll_menu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.payroll_menu.Image = global::RestaurantCsharpSystem.Properties.Resources.payroll1;
             this.payroll_menu.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.payroll_menu.Location = new System.Drawing.Point(11, 429);
+            this.payroll_menu.Location = new System.Drawing.Point(7, 471);
             this.payroll_menu.Name = "payroll_menu";
             this.payroll_menu.Size = new System.Drawing.Size(188, 36);
             this.payroll_menu.TabIndex = 2;
@@ -293,6 +275,24 @@
             this.payroll_menu.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.payroll_menu.UseVisualStyleBackColor = false;
             this.payroll_menu.Click += new System.EventHandler(this.payroll_menu_Click);
+            // 
+            // category_menu
+            // 
+            this.category_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
+            this.category_menu.FlatAppearance.BorderSize = 0;
+            this.category_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.category_menu.Font = new System.Drawing.Font("Inter", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.category_menu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.category_menu.Image = global::RestaurantCsharpSystem.Properties.Resources.products_icon;
+            this.category_menu.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.category_menu.Location = new System.Drawing.Point(7, 249);
+            this.category_menu.Name = "category_menu";
+            this.category_menu.Size = new System.Drawing.Size(188, 36);
+            this.category_menu.TabIndex = 2;
+            this.category_menu.Text = "Category";
+            this.category_menu.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.category_menu.UseVisualStyleBackColor = false;
+            this.category_menu.Click += new System.EventHandler(this.category_menu_Click);
             // 
             // products_menu
             // 
@@ -303,7 +303,7 @@
             this.products_menu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.products_menu.Image = global::RestaurantCsharpSystem.Properties.Resources.products_icon;
             this.products_menu.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.products_menu.Location = new System.Drawing.Point(11, 258);
+            this.products_menu.Location = new System.Drawing.Point(7, 300);
             this.products_menu.Name = "products_menu";
             this.products_menu.Size = new System.Drawing.Size(188, 36);
             this.products_menu.TabIndex = 2;
@@ -321,7 +321,7 @@
             this.orders_menu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.orders_menu.Image = global::RestaurantCsharpSystem.Properties.Resources.orders_icon;
             this.orders_menu.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.orders_menu.Location = new System.Drawing.Point(11, 316);
+            this.orders_menu.Location = new System.Drawing.Point(7, 358);
             this.orders_menu.Name = "orders_menu";
             this.orders_menu.Size = new System.Drawing.Size(162, 36);
             this.orders_menu.TabIndex = 2;
@@ -339,7 +339,7 @@
             this.employees_menu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.employees_menu.Image = global::RestaurantCsharpSystem.Properties.Resources.employees;
             this.employees_menu.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.employees_menu.Location = new System.Drawing.Point(11, 376);
+            this.employees_menu.Location = new System.Drawing.Point(7, 418);
             this.employees_menu.Name = "employees_menu";
             this.employees_menu.Size = new System.Drawing.Size(217, 36);
             this.employees_menu.TabIndex = 2;
@@ -393,6 +393,36 @@
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::RestaurantCsharpSystem.Properties.Resources.products1;
+            this.pictureBox3.Location = new System.Drawing.Point(12, 16);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::RestaurantCsharpSystem.Properties.Resources.orders1;
+            this.pictureBox2.Location = new System.Drawing.Point(15, 16);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(65, 64);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::RestaurantCsharpSystem.Properties.Resources.products1;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -405,6 +435,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.lblAuthedUser);
             this.Controls.Add(this.lblDashboard);
             this.Font = new System.Drawing.Font("Inter", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
@@ -412,20 +443,21 @@
             this.Name = "frmDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tufaax Restaurant";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             this.menusPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -444,7 +476,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label total_employees;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
@@ -456,6 +488,8 @@
         private System.Windows.Forms.Button orders_menu;
         private System.Windows.Forms.Button products_menu;
         private System.Windows.Forms.Button payroll_menu;
+        public System.Windows.Forms.Label lblAuthedUser;
+        private System.Windows.Forms.Button category_menu;
     }
 }
 

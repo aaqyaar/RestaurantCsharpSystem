@@ -62,9 +62,34 @@ namespace RestaurantCsharpSystem
         private void frmOrders_Load(object sender, EventArgs e)
         {
             getEmployees();
+            getProducts();
+        }
+
+        private void getProducts()
+        {
+            conn.Close();
+            conn.Open();
+            try
+            {
+                string query = "EXEC sp_listProducts";
+                command = new SqlCommand(query, conn);
+                reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    cmbOrderItems.Items.Add(reader[1].ToString());
+                }
+                reader.Close();
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "General Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            conn.Close();
         }
         private void getEmployees()
         {
+            conn.Close();
             conn.Open();
             try
             {
@@ -111,5 +136,8 @@ namespace RestaurantCsharpSystem
         {
             getOrders();
         }
+
+      
+
     }
 }

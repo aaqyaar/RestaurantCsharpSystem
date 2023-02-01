@@ -18,6 +18,7 @@ namespace RestaurantCsharpSystem
         SqlCommand command;
         SqlDataAdapter adapter;
         SqlCommandBuilder commandBuilder;
+        SqlDataReader reader;
         public frmProducts()
         {
             InitializeComponent();
@@ -61,7 +62,7 @@ namespace RestaurantCsharpSystem
         private void btnCreateProduct_Click(object sender, EventArgs e)
         {
             string _name = txtProductName.Text;
-            string _category = txtProductCategory.Text;
+            string _category = cmbCategory.Text;
             string _qty = txtProductQty.Text;
             string _cost = txtProductCost.Text;
             string _price = txtProductPrice.Text;
@@ -74,24 +75,42 @@ namespace RestaurantCsharpSystem
                 HandleSubmit(_name, _category, _qty, _cost, _price);
             }
         }
+        private string findCategoryByName(string category)
+        {
+            string id = "";
+            string sql = "EXEC sp_findCategoryByName '" + category + "'";
+            conn.Open();
+            command = new SqlCommand(sql, conn);
+            reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                id = reader[0].ToString();
+            }
+
+            reader.Close();
+            conn.Close();
+
+            return id;
+        }
         private void HandleSubmit(
             string name, string category, string qty, string originalPrice, string salePrice
             ) {
-            conn.Open();
+            
             try
             {
-              
+                string categoryId = findCategoryByName(category);
+                conn.Open();
                 string query = "EXEC sp_createProduct @name = @prodName, @category = @prodCategory, @quantity = @prodQty, @originalPrice = @prodCost, @salePrice = @prodPrice";
                 command = new SqlCommand(query, conn);
                 command.Parameters.AddWithValue("@prodName", name);
-                command.Parameters.AddWithValue("@prodCategory", category);
+                command.Parameters.AddWithValue("@prodCategory", categoryId);
                 command.Parameters.AddWithValue("@prodQty", qty);
                 command.Parameters.AddWithValue("@prodCost", originalPrice);
                 command.Parameters.AddWithValue("@prodPrice", salePrice);
 
                 command.ExecuteNonQuery();
                 resetForm();
-              
+                reader.Close();
                 command.Dispose();
                 conn.Close();
                 // refresh products 
@@ -106,7 +125,7 @@ namespace RestaurantCsharpSystem
         private void resetForm()
         {
             txtProductName.Clear();
-            txtProductCategory.Clear();
+            cmbCategory.Text = "";
             txtProductCost.Clear();
             txtProductId.Clear();
             txtProductPrice.Clear();
@@ -130,6 +149,13 @@ namespace RestaurantCsharpSystem
                 dataTable.Clear();
                 adapter.Fill(dataTable);       
                 productsGridView.DataSource = dataTable;
+                productsGridView.Columns[0].HeaderCell.Style.Font = new Font("Inter", 14, FontStyle.Regular);
+                productsGridView.Columns[1].HeaderCell.Style.Font = new Font("Inter", 14, FontStyle.Regular);
+                productsGridView.Columns[2].HeaderCell.Style.Font = new Font("Inter", 14, FontStyle.Regular);
+                productsGridView.Columns[3].HeaderCell.Style.Font = new Font("Inter", 14, FontStyle.Regular);
+                productsGridView.Columns[4].HeaderCell.Style.Font = new Font("Inter", 14, FontStyle.Regular);
+                productsGridView.Columns[5].HeaderCell.Style.Font = new Font("Inter", 14, FontStyle.Regular);
+                productsGridView.Columns[6].HeaderCell.Style.Font = new Font("Inter", 14, FontStyle.Regular);
                 productsGridView.Refresh();
                 conn.Close();
             }
@@ -143,6 +169,31 @@ namespace RestaurantCsharpSystem
         {
             txtProductId.Enabled = false;
             getProducts();
+            getCategories();
+
+        }
+
+        private void getCategories()
+        {
+            conn.Close();
+            conn.Open();
+            try
+            {
+                string query = "EXEC sp_listCategory";
+                command = new SqlCommand(query, conn);
+                reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    cmbCategory.Items.Add(reader[1].ToString());
+                }
+                reader.Close();
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "General Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            conn.Close();
         }
 
         private void btnListProducts_Click(object sender, EventArgs e)
@@ -181,7 +232,7 @@ namespace RestaurantCsharpSystem
         {
             txtProductId.Text = productsGridView.CurrentRow.Cells[0].Value.ToString();
             txtProductName.Text = productsGridView.CurrentRow.Cells[1].Value.ToString();
-            txtProductCategory.Text = productsGridView.CurrentRow.Cells[2].Value.ToString();
+            cmbCategory.Text = productsGridView.CurrentRow.Cells[2].Value.ToString();
             txtProductQty.Text = productsGridView.CurrentRow.Cells[3].Value.ToString();
             txtProductCost.Text = productsGridView.CurrentRow.Cells[4].Value.ToString();
             txtProductPrice.Text = productsGridView.CurrentRow.Cells[5].Value.ToString();
@@ -219,7 +270,7 @@ namespace RestaurantCsharpSystem
         {
             string _id = txtProductId.Text;
             string _name = txtProductName.Text;
-            string _category = txtProductCategory.Text;
+            string _category = cmbCategory.SelectedItem.ToString();
             string _qty = txtProductQty.Text;
             string _cost = txtProductCost.Text;
             string _price = txtProductPrice.Text;
@@ -266,5 +317,10 @@ namespace RestaurantCsharpSystem
             conn.Close();
         }
 
+        private void btnGeneralProductsRpt_Click(object sender, EventArgs e)
+        {
+            frmGeneralProductsRpt report = new frmGeneralProductsRpt();
+            report.ShowDialog();
+        }
     }
 }

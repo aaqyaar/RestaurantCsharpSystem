@@ -48,9 +48,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -70,6 +77,12 @@
     <Compile Include="frmAddUser.Designer.cs">
       <DependentUpon>frmAddUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCategory.Designer.cs">
+      <DependentUpon>frmCategory.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +94,30 @@
     </Compile>
     <Compile Include="frmEmployees.Designer.cs">
       <DependentUpon>frmEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGeneralEmployeesRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGeneralEmployeesRpt.Designer.cs">
+      <DependentUpon>frmGeneralEmployeesRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGeneralProductsRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGeneralProductsRpt.Designer.cs">
+      <DependentUpon>frmGeneralProductsRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGeneralUsersReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGeneralUsersReport.Designer.cs">
+      <DependentUpon>frmGeneralUsersReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="frmOrders.cs">
       <SubType>Form</SubType>
@@ -106,8 +143,32 @@
     <Compile Include="frmUsers.Designer.cs">
       <DependentUpon>frmUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="OrdersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrdersForm.Designer.cs">
+      <DependentUpon>OrdersForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rptGeneralEmployees.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptGeneralEmployees.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptGeneralProducts.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptGeneralProducts.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptGeneralUsers.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptGeneralUsers.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="users\NewUser.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -117,11 +178,26 @@
     <EmbeddedResource Include="frmAddUser.resx">
       <DependentUpon>frmAddUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCategory.resx">
+      <DependentUpon>frmCategory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDashboard.resx">
       <DependentUpon>frmDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEmployees.resx">
       <DependentUpon>frmEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGeneralEmployeesRpt.resx">
+      <DependentUpon>frmGeneralEmployeesRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGeneralProductsRpt.resx">
+      <DependentUpon>frmGeneralProductsRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGeneralUsersReport.resx">
+      <DependentUpon>frmGeneralUsersReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmOrders.resx">
       <DependentUpon>frmOrders.cs</DependentUpon>
@@ -135,6 +211,9 @@
     <EmbeddedResource Include="frmUsers.resx">
       <DependentUpon>frmUsers.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OrdersForm.resx">
+      <DependentUpon>OrdersForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -145,6 +224,18 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="rptGeneralEmployees.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptGeneralEmployees.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptGeneralProducts.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptGeneralProducts.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptGeneralUsers.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptGeneralUsers.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="users\NewUser.resx">
       <DependentUpon>NewUser.cs</DependentUpon>
     </EmbeddedResource>
@@ -220,6 +311,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\payroll1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

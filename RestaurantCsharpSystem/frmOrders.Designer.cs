@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menusPanel = new System.Windows.Forms.Panel();
             this.payroll_menu = new System.Windows.Forms.Button();
             this.products_menu = new System.Windows.Forms.Button();
@@ -59,6 +59,8 @@
             this.cmbOrderItems = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.cmbOrderRefEmployee = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cmbOrderStatus = new System.Windows.Forms.ComboBox();
             this.menusPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordersGridView)).BeginInit();
@@ -78,7 +80,7 @@
             this.menusPanel.Font = new System.Drawing.Font("Inter", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menusPanel.Location = new System.Drawing.Point(0, 0);
             this.menusPanel.Name = "menusPanel";
-            this.menusPanel.Size = new System.Drawing.Size(200, 598);
+            this.menusPanel.Size = new System.Drawing.Size(200, 738);
             this.menusPanel.TabIndex = 5;
             // 
             // payroll_menu
@@ -202,7 +204,7 @@
             // 
             this.lblDashboard.AutoSize = true;
             this.lblDashboard.Font = new System.Drawing.Font("Public Sans SemiBold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDashboard.Location = new System.Drawing.Point(223, 42);
+            this.lblDashboard.Location = new System.Drawing.Point(258, 101);
             this.lblDashboard.Name = "lblDashboard";
             this.lblDashboard.Size = new System.Drawing.Size(235, 39);
             this.lblDashboard.TabIndex = 50;
@@ -210,86 +212,91 @@
             // 
             // btnDelOrder
             // 
+            this.btnDelOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
             this.btnDelOrder.Font = new System.Drawing.Font("Inter", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelOrder.ForeColor = System.Drawing.Color.Black;
-            this.btnDelOrder.Location = new System.Drawing.Point(1224, 517);
+            this.btnDelOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
+            this.btnDelOrder.Location = new System.Drawing.Point(1291, 576);
             this.btnDelOrder.Name = "btnDelOrder";
             this.btnDelOrder.Size = new System.Drawing.Size(124, 46);
             this.btnDelOrder.TabIndex = 47;
             this.btnDelOrder.Text = "Delete";
-            this.btnDelOrder.UseVisualStyleBackColor = true;
+            this.btnDelOrder.UseVisualStyleBackColor = false;
             // 
             // btnListOrders
             // 
+            this.btnListOrders.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
             this.btnListOrders.Font = new System.Drawing.Font("Inter", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListOrders.ForeColor = System.Drawing.Color.Black;
-            this.btnListOrders.Location = new System.Drawing.Point(1035, 516);
+            this.btnListOrders.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
+            this.btnListOrders.Location = new System.Drawing.Point(1102, 575);
             this.btnListOrders.Name = "btnListOrders";
             this.btnListOrders.Size = new System.Drawing.Size(124, 46);
             this.btnListOrders.TabIndex = 45;
             this.btnListOrders.Text = "Refresh";
-            this.btnListOrders.UseVisualStyleBackColor = true;
+            this.btnListOrders.UseVisualStyleBackColor = false;
             this.btnListOrders.Click += new System.EventHandler(this.btnListOrders_Click);
             // 
             // btnUpdateOrder
             // 
+            this.btnUpdateOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
             this.btnUpdateOrder.Font = new System.Drawing.Font("Inter", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateOrder.ForeColor = System.Drawing.Color.Black;
-            this.btnUpdateOrder.Location = new System.Drawing.Point(866, 516);
+            this.btnUpdateOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
+            this.btnUpdateOrder.Location = new System.Drawing.Point(933, 575);
             this.btnUpdateOrder.Name = "btnUpdateOrder";
             this.btnUpdateOrder.Size = new System.Drawing.Size(124, 46);
             this.btnUpdateOrder.TabIndex = 40;
             this.btnUpdateOrder.Text = "Update";
-            this.btnUpdateOrder.UseVisualStyleBackColor = true;
+            this.btnUpdateOrder.UseVisualStyleBackColor = false;
             // 
             // btnCreateOrder
             // 
+            this.btnCreateOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
             this.btnCreateOrder.Font = new System.Drawing.Font("Inter", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreateOrder.ForeColor = System.Drawing.Color.Black;
-            this.btnCreateOrder.Location = new System.Drawing.Point(683, 517);
+            this.btnCreateOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
+            this.btnCreateOrder.Location = new System.Drawing.Point(750, 576);
             this.btnCreateOrder.Name = "btnCreateOrder";
             this.btnCreateOrder.Size = new System.Drawing.Size(124, 46);
             this.btnCreateOrder.TabIndex = 49;
             this.btnCreateOrder.Text = "Register";
-            this.btnCreateOrder.UseVisualStyleBackColor = true;
+            this.btnCreateOrder.UseVisualStyleBackColor = false;
             // 
             // ordersGridView
             // 
             this.ordersGridView.AllowUserToAddRows = false;
             this.ordersGridView.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
-            this.ordersGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
+            this.ordersGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.ordersGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ordersGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
             this.ordersGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Inter", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ordersGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Inter", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ordersGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.ordersGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Inter", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ordersGridView.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Inter", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ordersGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.ordersGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
-            this.ordersGridView.Location = new System.Drawing.Point(683, 86);
+            this.ordersGridView.Location = new System.Drawing.Point(750, 145);
             this.ordersGridView.Name = "ordersGridView";
             this.ordersGridView.ReadOnly = true;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Inter", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ordersGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Inter", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ordersGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.ordersGridView.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
             this.ordersGridView.RowTemplate.Height = 24;
             this.ordersGridView.Size = new System.Drawing.Size(665, 425);
@@ -297,9 +304,11 @@
             // 
             // txtOrderTotal
             // 
+            this.txtOrderTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
             this.txtOrderTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtOrderTotal.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOrderTotal.Location = new System.Drawing.Point(230, 507);
+            this.txtOrderTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
+            this.txtOrderTotal.Location = new System.Drawing.Point(265, 586);
             this.txtOrderTotal.Name = "txtOrderTotal";
             this.txtOrderTotal.Size = new System.Drawing.Size(333, 32);
             this.txtOrderTotal.TabIndex = 37;
@@ -308,7 +317,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(226, 475);
+            this.label4.Location = new System.Drawing.Point(261, 561);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(120, 24);
             this.label4.TabIndex = 41;
@@ -316,9 +325,11 @@
             // 
             // txtOrderDiscount
             // 
+            this.txtOrderDiscount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
             this.txtOrderDiscount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtOrderDiscount.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOrderDiscount.Location = new System.Drawing.Point(230, 440);
+            this.txtOrderDiscount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
+            this.txtOrderDiscount.Location = new System.Drawing.Point(265, 464);
             this.txtOrderDiscount.Name = "txtOrderDiscount";
             this.txtOrderDiscount.Size = new System.Drawing.Size(333, 32);
             this.txtOrderDiscount.TabIndex = 36;
@@ -327,7 +338,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(226, 408);
+            this.label3.Location = new System.Drawing.Point(261, 440);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(157, 24);
             this.label3.TabIndex = 46;
@@ -335,9 +346,11 @@
             // 
             // txtOrderQty
             // 
+            this.txtOrderQty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
             this.txtOrderQty.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtOrderQty.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOrderQty.Location = new System.Drawing.Point(230, 370);
+            this.txtOrderQty.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
+            this.txtOrderQty.Location = new System.Drawing.Point(265, 402);
             this.txtOrderQty.Name = "txtOrderQty";
             this.txtOrderQty.Size = new System.Drawing.Size(333, 32);
             this.txtOrderQty.TabIndex = 35;
@@ -346,7 +359,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(226, 338);
+            this.label2.Location = new System.Drawing.Point(261, 378);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(107, 24);
             this.label2.TabIndex = 43;
@@ -354,18 +367,22 @@
             // 
             // txtSearchOrder
             // 
+            this.txtSearchOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
             this.txtSearchOrder.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSearchOrder.Font = new System.Drawing.Font("Inter", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchOrder.Location = new System.Drawing.Point(1015, 40);
+            this.txtSearchOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
+            this.txtSearchOrder.Location = new System.Drawing.Point(1082, 99);
             this.txtSearchOrder.Name = "txtSearchOrder";
             this.txtSearchOrder.Size = new System.Drawing.Size(333, 40);
             this.txtSearchOrder.TabIndex = 39;
             // 
             // txtOrderID
             // 
+            this.txtOrderID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
             this.txtOrderID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtOrderID.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOrderID.Location = new System.Drawing.Point(230, 159);
+            this.txtOrderID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
+            this.txtOrderID.Location = new System.Drawing.Point(265, 218);
             this.txtOrderID.Name = "txtOrderID";
             this.txtOrderID.Size = new System.Drawing.Size(333, 32);
             this.txtOrderID.TabIndex = 38;
@@ -374,7 +391,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(226, 127);
+            this.label6.Location = new System.Drawing.Point(261, 186);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(93, 24);
             this.label6.TabIndex = 42;
@@ -384,7 +401,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(226, 199);
+            this.label1.Location = new System.Drawing.Point(261, 254);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(125, 24);
             this.label1.TabIndex = 44;
@@ -392,9 +409,11 @@
             // 
             // cmbOrderItems
             // 
+            this.cmbOrderItems.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
             this.cmbOrderItems.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbOrderItems.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
             this.cmbOrderItems.FormattingEnabled = true;
-            this.cmbOrderItems.Location = new System.Drawing.Point(230, 232);
+            this.cmbOrderItems.Location = new System.Drawing.Point(265, 281);
             this.cmbOrderItems.Name = "cmbOrderItems";
             this.cmbOrderItems.Size = new System.Drawing.Size(333, 32);
             this.cmbOrderItems.TabIndex = 51;
@@ -403,7 +422,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(226, 271);
+            this.label5.Location = new System.Drawing.Point(261, 315);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(205, 24);
             this.label5.TabIndex = 41;
@@ -411,19 +430,47 @@
             // 
             // cmbOrderRefEmployee
             // 
+            this.cmbOrderRefEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
             this.cmbOrderRefEmployee.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbOrderRefEmployee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
             this.cmbOrderRefEmployee.FormattingEnabled = true;
-            this.cmbOrderRefEmployee.Location = new System.Drawing.Point(230, 301);
+            this.cmbOrderRefEmployee.Location = new System.Drawing.Point(265, 341);
             this.cmbOrderRefEmployee.Name = "cmbOrderRefEmployee";
             this.cmbOrderRefEmployee.Size = new System.Drawing.Size(333, 32);
             this.cmbOrderRefEmployee.TabIndex = 51;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(261, 500);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(134, 24);
+            this.label7.TabIndex = 46;
+            this.label7.Text = "Order. Status";
+            // 
+            // cmbOrderStatus
+            // 
+            this.cmbOrderStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
+            this.cmbOrderStatus.Font = new System.Drawing.Font("Inter", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbOrderStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(244)))), ((int)(((byte)(246)))));
+            this.cmbOrderStatus.FormattingEnabled = true;
+            this.cmbOrderStatus.Items.AddRange(new object[] {
+            "Paid",
+            "Unpaid",
+            "Cancelled"});
+            this.cmbOrderStatus.Location = new System.Drawing.Point(265, 524);
+            this.cmbOrderStatus.Name = "cmbOrderStatus";
+            this.cmbOrderStatus.Size = new System.Drawing.Size(333, 32);
+            this.cmbOrderStatus.TabIndex = 51;
             // 
             // frmOrders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
-            this.ClientSize = new System.Drawing.Size(1382, 598);
+            this.ClientSize = new System.Drawing.Size(1473, 738);
+            this.Controls.Add(this.cmbOrderStatus);
             this.Controls.Add(this.cmbOrderRefEmployee);
             this.Controls.Add(this.cmbOrderItems);
             this.Controls.Add(this.lblDashboard);
@@ -435,6 +482,7 @@
             this.Controls.Add(this.txtOrderTotal);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.txtOrderDiscount);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtOrderQty);
@@ -449,6 +497,7 @@
             this.Name = "frmOrders";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmOrders";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmOrders_Load);
             this.menusPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -487,5 +536,7 @@
         private System.Windows.Forms.ComboBox cmbOrderItems;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cmbOrderRefEmployee;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cmbOrderStatus;
     }
 }
