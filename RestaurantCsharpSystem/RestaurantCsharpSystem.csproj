@@ -12,6 +12,7 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,8 +25,8 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -46,6 +47,18 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>3D5519A0AC298C4E6C2D43553BD9C8B6C8416E58</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>RestaurantCsharpSystem_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
@@ -71,12 +84,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Database\DBConnection.cs" />
-    <Compile Include="frmAddUser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmAddUser.Designer.cs">
-      <DependentUpon>frmAddUser.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmCategory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +107,18 @@
     </Compile>
     <Compile Include="frmGeneralEmployeesRpt.Designer.cs">
       <DependentUpon>frmGeneralEmployeesRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGeneralOrdersRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGeneralOrdersRpt.Designer.cs">
+      <DependentUpon>frmGeneralOrdersRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGeneralPayrollRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGeneralPayrollRpt.Designer.cs">
+      <DependentUpon>frmGeneralPayrollRpt.cs</DependentUpon>
     </Compile>
     <Compile Include="frmGeneralProductsRpt.cs">
       <SubType>Form</SubType>
@@ -137,6 +156,18 @@
     <Compile Include="frmProducts.Designer.cs">
       <DependentUpon>frmProducts.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSearchUserByID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSearchUserByID.Designer.cs">
+      <DependentUpon>frmSearchUserByID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSingleUserRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSingleUserRpt.Designer.cs">
+      <DependentUpon>frmSingleUserRpt.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmUsers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +188,18 @@
       <DependentUpon>rptGeneralEmployees.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="rptGeneralOrders.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptGeneralOrders.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptGeneralPayroll.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptGeneralPayroll.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="rptGeneralProducts.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -169,15 +212,18 @@
       <DependentUpon>rptGeneralUsers.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="rptSingleUserByID.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSingleUserByID.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="users\NewUser.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="users\NewUser.Designer.cs">
       <DependentUpon>NewUser.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="frmAddUser.resx">
-      <DependentUpon>frmAddUser.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmCategory.resx">
       <DependentUpon>frmCategory.cs</DependentUpon>
     </EmbeddedResource>
@@ -189,6 +235,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGeneralEmployeesRpt.resx">
       <DependentUpon>frmGeneralEmployeesRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGeneralOrdersRpt.resx">
+      <DependentUpon>frmGeneralOrdersRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGeneralPayrollRpt.resx">
+      <DependentUpon>frmGeneralPayrollRpt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGeneralProductsRpt.resx">
       <DependentUpon>frmGeneralProductsRpt.cs</DependentUpon>
@@ -207,6 +259,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmProducts.resx">
       <DependentUpon>frmProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSearchUserByID.resx">
+      <DependentUpon>frmSearchUserByID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSingleUserRpt.resx">
+      <DependentUpon>frmSingleUserRpt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUsers.resx">
       <DependentUpon>frmUsers.cs</DependentUpon>
@@ -228,6 +286,14 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptGeneralEmployees.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="rptGeneralOrders.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptGeneralOrders.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptGeneralPayroll.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptGeneralPayroll.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="rptGeneralProducts.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptGeneralProducts.cs</LastGenOutput>
@@ -235,6 +301,10 @@
     <EmbeddedResource Include="rptGeneralUsers.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptGeneralUsers.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptSingleUserByID.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSingleUserByID.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="users\NewUser.resx">
       <DependentUpon>NewUser.cs</DependentUpon>
@@ -248,6 +318,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="RestaurantCsharpSystem_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -10,19 +10,18 @@ using System.Windows.Forms;
 
 namespace RestaurantCsharpSystem
 {
-    public partial class frmGeneralUsersReport : Form
+    public partial class frmGeneralOrdersRpt : Form
     {
-        public frmGeneralUsersReport()
+        public frmGeneralOrdersRpt()
         {
             InitializeComponent();
         }
 
         private void crystalReportViewer1_Load(object sender, EventArgs e)
         {
-            rptGeneralUsers rpt = new rptGeneralUsers();
+            rptGeneralOrders rpt = new rptGeneralOrders();
             rpt.Refresh();
             crystalReportViewer1.ReportSource = rpt;
-
         }
     }
 }

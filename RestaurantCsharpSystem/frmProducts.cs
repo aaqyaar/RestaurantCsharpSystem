@@ -270,7 +270,7 @@ namespace RestaurantCsharpSystem
         {
             string _id = txtProductId.Text;
             string _name = txtProductName.Text;
-            string _category = cmbCategory.SelectedItem.ToString();
+            string _category = cmbCategory.Text;
             string _qty = txtProductQty.Text;
             string _cost = txtProductCost.Text;
             string _price = txtProductPrice.Text;
@@ -289,15 +289,17 @@ namespace RestaurantCsharpSystem
               string name, string category, string qty, string originalPrice, string salePrice
               )
         {
-            conn.Open();
+           
             try
             {
-                
+                // 
+                string categoryId = findCategoryByName(category);
+                conn.Open();
                 string query = "EXEC sp_updateProduct @id = @prodId, @name = @prodName, @category = @prodCategory, @quantity = @prodQty, @originalPrice = @prodCost, @salePrice = @prodPrice";
                 command = new SqlCommand(query, conn);
                 command.Parameters.AddWithValue("@prodId", id);
                 command.Parameters.AddWithValue("@prodName", name);
-                command.Parameters.AddWithValue("@prodCategory", category);
+                command.Parameters.AddWithValue("@prodCategory", categoryId);
                 command.Parameters.AddWithValue("@prodQty", qty);
                 command.Parameters.AddWithValue("@prodCost", originalPrice);
                 command.Parameters.AddWithValue("@prodPrice", salePrice);

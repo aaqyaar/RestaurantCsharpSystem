@@ -34,7 +34,7 @@ namespace RestaurantCsharpSystem
         private void btnAddUser_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new frmAddUser().ShowDialog();
+      //      new frmAddUser().ShowDialog();
             this.Close();
         }
 
@@ -280,6 +280,12 @@ namespace RestaurantCsharpSystem
         {
             frmGeneralUsersReport report = new frmGeneralUsersReport();
             report.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frmSearchUserByID frmUserId = new frmSearchUserByID();
+            frmUserId.ShowDialog();
         }
     }
 }

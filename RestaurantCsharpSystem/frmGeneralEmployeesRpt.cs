@@ -16,5 +16,12 @@ namespace RestaurantCsharpSystem
         {
             InitializeComponent();
         }
+
+        private void crystalReportViewer1_Load(object sender, EventArgs e)
+        {
+            rptGeneralEmployees rpt = new rptGeneralEmployees();
+            rpt.Refresh();
+            crystalReportViewer1.ReportSource = rpt;
+        }
     }
 }
