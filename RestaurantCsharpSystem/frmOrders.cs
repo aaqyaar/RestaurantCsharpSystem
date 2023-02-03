@@ -446,5 +446,12 @@ namespace RestaurantCsharpSystem
             frmGeneralOrdersRpt rpt = new frmGeneralOrdersRpt();
             rpt.ShowDialog();
         }
+
+        private void category_menu_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new frmCategory().ShowDialog();
+            this.Close();
+        }
     }
 }

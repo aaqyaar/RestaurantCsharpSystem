@@ -33,6 +33,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menusPanel = new System.Windows.Forms.Panel();
+            this.payroll_menu = new System.Windows.Forms.Button();
+            this.products_menu = new System.Windows.Forms.Button();
+            this.orders_menu = new System.Windows.Forms.Button();
+            this.employees_menu = new System.Windows.Forms.Button();
+            this.user_menu = new System.Windows.Forms.Button();
+            this.dashboard_menu = new System.Windows.Forms.Button();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.lblDashboard = new System.Windows.Forms.Label();
             this.btnDelOrder = new System.Windows.Forms.Button();
             this.btnGeneralOrders = new System.Windows.Forms.Button();
@@ -55,22 +62,17 @@
             this.listBoxProducts = new System.Windows.Forms.ListBox();
             this.label8 = new System.Windows.Forms.Label();
             this.lblCheckQuantity = new System.Windows.Forms.Label();
-            this.payroll_menu = new System.Windows.Forms.Button();
-            this.products_menu = new System.Windows.Forms.Button();
-            this.orders_menu = new System.Windows.Forms.Button();
-            this.employees_menu = new System.Windows.Forms.Button();
-            this.user_menu = new System.Windows.Forms.Button();
-            this.dashboard_menu = new System.Windows.Forms.Button();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.category_menu = new System.Windows.Forms.Button();
             this.menusPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ordersGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ordersGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // menusPanel
             // 
             this.menusPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.menusPanel.Controls.Add(this.payroll_menu);
+            this.menusPanel.Controls.Add(this.category_menu);
             this.menusPanel.Controls.Add(this.products_menu);
             this.menusPanel.Controls.Add(this.orders_menu);
             this.menusPanel.Controls.Add(this.employees_menu);
@@ -83,6 +85,123 @@
             this.menusPanel.Name = "menusPanel";
             this.menusPanel.Size = new System.Drawing.Size(200, 738);
             this.menusPanel.TabIndex = 5;
+            // 
+            // payroll_menu
+            // 
+            this.payroll_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
+            this.payroll_menu.FlatAppearance.BorderSize = 0;
+            this.payroll_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.payroll_menu.Font = new System.Drawing.Font("Inter", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.payroll_menu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.payroll_menu.Image = global::RestaurantCsharpSystem.Properties.Resources.payroll1;
+            this.payroll_menu.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.payroll_menu.Location = new System.Drawing.Point(11, 475);
+            this.payroll_menu.Name = "payroll_menu";
+            this.payroll_menu.Size = new System.Drawing.Size(188, 36);
+            this.payroll_menu.TabIndex = 2;
+            this.payroll_menu.Text = "Payroll";
+            this.payroll_menu.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.payroll_menu.UseVisualStyleBackColor = false;
+            this.payroll_menu.Click += new System.EventHandler(this.payroll_menu_Click);
+            // 
+            // products_menu
+            // 
+            this.products_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
+            this.products_menu.FlatAppearance.BorderSize = 0;
+            this.products_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.products_menu.Font = new System.Drawing.Font("Inter", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.products_menu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.products_menu.Image = global::RestaurantCsharpSystem.Properties.Resources.products_icon;
+            this.products_menu.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.products_menu.Location = new System.Drawing.Point(11, 304);
+            this.products_menu.Name = "products_menu";
+            this.products_menu.Size = new System.Drawing.Size(188, 36);
+            this.products_menu.TabIndex = 2;
+            this.products_menu.Text = "Products";
+            this.products_menu.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.products_menu.UseVisualStyleBackColor = false;
+            this.products_menu.Click += new System.EventHandler(this.products_menu_Click);
+            // 
+            // orders_menu
+            // 
+            this.orders_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(41)))), ((int)(((byte)(55)))));
+            this.orders_menu.FlatAppearance.BorderSize = 0;
+            this.orders_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.orders_menu.Font = new System.Drawing.Font("Inter", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orders_menu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.orders_menu.Image = global::RestaurantCsharpSystem.Properties.Resources.orders_icon;
+            this.orders_menu.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.orders_menu.Location = new System.Drawing.Point(11, 362);
+            this.orders_menu.Name = "orders_menu";
+            this.orders_menu.Size = new System.Drawing.Size(162, 36);
+            this.orders_menu.TabIndex = 2;
+            this.orders_menu.Text = "Orders";
+            this.orders_menu.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.orders_menu.UseVisualStyleBackColor = false;
+            // 
+            // employees_menu
+            // 
+            this.employees_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
+            this.employees_menu.FlatAppearance.BorderSize = 0;
+            this.employees_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.employees_menu.Font = new System.Drawing.Font("Inter", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.employees_menu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.employees_menu.Image = global::RestaurantCsharpSystem.Properties.Resources.employees;
+            this.employees_menu.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.employees_menu.Location = new System.Drawing.Point(11, 422);
+            this.employees_menu.Name = "employees_menu";
+            this.employees_menu.Size = new System.Drawing.Size(217, 36);
+            this.employees_menu.TabIndex = 2;
+            this.employees_menu.Text = "Employees";
+            this.employees_menu.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.employees_menu.UseVisualStyleBackColor = false;
+            this.employees_menu.Click += new System.EventHandler(this.employees_menu_Click);
+            // 
+            // user_menu
+            // 
+            this.user_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
+            this.user_menu.FlatAppearance.BorderSize = 0;
+            this.user_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.user_menu.Font = new System.Drawing.Font("Inter", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.user_menu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.user_menu.Image = global::RestaurantCsharpSystem.Properties.Resources.users;
+            this.user_menu.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.user_menu.Location = new System.Drawing.Point(11, 199);
+            this.user_menu.Name = "user_menu";
+            this.user_menu.Size = new System.Drawing.Size(162, 36);
+            this.user_menu.TabIndex = 2;
+            this.user_menu.Text = "Users";
+            this.user_menu.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.user_menu.UseVisualStyleBackColor = false;
+            this.user_menu.Click += new System.EventHandler(this.user_menu_Click);
+            // 
+            // dashboard_menu
+            // 
+            this.dashboard_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
+            this.dashboard_menu.FlatAppearance.BorderSize = 0;
+            this.dashboard_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dashboard_menu.Font = new System.Drawing.Font("Inter", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dashboard_menu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dashboard_menu.Image = global::RestaurantCsharpSystem.Properties.Resources.dashboard2;
+            this.dashboard_menu.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.dashboard_menu.Location = new System.Drawing.Point(11, 144);
+            this.dashboard_menu.Name = "dashboard_menu";
+            this.dashboard_menu.Size = new System.Drawing.Size(212, 38);
+            this.dashboard_menu.TabIndex = 2;
+            this.dashboard_menu.Text = "Dashboard";
+            this.dashboard_menu.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.dashboard_menu.UseVisualStyleBackColor = false;
+            this.dashboard_menu.Click += new System.EventHandler(this.dashboard_menu_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::RestaurantCsharpSystem.Properties.Resources.juliana_s_ilvia__1_;
+            this.pictureBox4.Location = new System.Drawing.Point(-1, -1);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(200, 139);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 0;
+            this.pictureBox4.TabStop = false;
             // 
             // lblDashboard
             // 
@@ -370,122 +489,23 @@
             this.lblCheckQuantity.Size = new System.Drawing.Size(0, 19);
             this.lblCheckQuantity.TabIndex = 43;
             // 
-            // payroll_menu
+            // category_menu
             // 
-            this.payroll_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
-            this.payroll_menu.FlatAppearance.BorderSize = 0;
-            this.payroll_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.payroll_menu.Font = new System.Drawing.Font("Inter", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.payroll_menu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.payroll_menu.Image = global::RestaurantCsharpSystem.Properties.Resources.payroll1;
-            this.payroll_menu.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.payroll_menu.Location = new System.Drawing.Point(11, 429);
-            this.payroll_menu.Name = "payroll_menu";
-            this.payroll_menu.Size = new System.Drawing.Size(188, 36);
-            this.payroll_menu.TabIndex = 2;
-            this.payroll_menu.Text = "Payroll";
-            this.payroll_menu.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.payroll_menu.UseVisualStyleBackColor = false;
-            this.payroll_menu.Click += new System.EventHandler(this.payroll_menu_Click);
-            // 
-            // products_menu
-            // 
-            this.products_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
-            this.products_menu.FlatAppearance.BorderSize = 0;
-            this.products_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.products_menu.Font = new System.Drawing.Font("Inter", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.products_menu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.products_menu.Image = global::RestaurantCsharpSystem.Properties.Resources.products_icon;
-            this.products_menu.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.products_menu.Location = new System.Drawing.Point(11, 258);
-            this.products_menu.Name = "products_menu";
-            this.products_menu.Size = new System.Drawing.Size(188, 36);
-            this.products_menu.TabIndex = 2;
-            this.products_menu.Text = "Products";
-            this.products_menu.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.products_menu.UseVisualStyleBackColor = false;
-            this.products_menu.Click += new System.EventHandler(this.products_menu_Click);
-            // 
-            // orders_menu
-            // 
-            this.orders_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
-            this.orders_menu.FlatAppearance.BorderSize = 0;
-            this.orders_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.orders_menu.Font = new System.Drawing.Font("Inter", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.orders_menu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.orders_menu.Image = global::RestaurantCsharpSystem.Properties.Resources.orders_icon;
-            this.orders_menu.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.orders_menu.Location = new System.Drawing.Point(11, 316);
-            this.orders_menu.Name = "orders_menu";
-            this.orders_menu.Size = new System.Drawing.Size(162, 36);
-            this.orders_menu.TabIndex = 2;
-            this.orders_menu.Text = "Orders";
-            this.orders_menu.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.orders_menu.UseVisualStyleBackColor = false;
-            // 
-            // employees_menu
-            // 
-            this.employees_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
-            this.employees_menu.FlatAppearance.BorderSize = 0;
-            this.employees_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.employees_menu.Font = new System.Drawing.Font("Inter", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employees_menu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.employees_menu.Image = global::RestaurantCsharpSystem.Properties.Resources.employees;
-            this.employees_menu.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.employees_menu.Location = new System.Drawing.Point(11, 376);
-            this.employees_menu.Name = "employees_menu";
-            this.employees_menu.Size = new System.Drawing.Size(217, 36);
-            this.employees_menu.TabIndex = 2;
-            this.employees_menu.Text = "Employees";
-            this.employees_menu.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.employees_menu.UseVisualStyleBackColor = false;
-            this.employees_menu.Click += new System.EventHandler(this.employees_menu_Click);
-            // 
-            // user_menu
-            // 
-            this.user_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
-            this.user_menu.FlatAppearance.BorderSize = 0;
-            this.user_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.user_menu.Font = new System.Drawing.Font("Inter", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.user_menu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.user_menu.Image = global::RestaurantCsharpSystem.Properties.Resources.users;
-            this.user_menu.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.user_menu.Location = new System.Drawing.Point(11, 199);
-            this.user_menu.Name = "user_menu";
-            this.user_menu.Size = new System.Drawing.Size(162, 36);
-            this.user_menu.TabIndex = 2;
-            this.user_menu.Text = "Users";
-            this.user_menu.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.user_menu.UseVisualStyleBackColor = false;
-            this.user_menu.Click += new System.EventHandler(this.user_menu_Click);
-            // 
-            // dashboard_menu
-            // 
-            this.dashboard_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
-            this.dashboard_menu.FlatAppearance.BorderSize = 0;
-            this.dashboard_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dashboard_menu.Font = new System.Drawing.Font("Inter", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dashboard_menu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dashboard_menu.Image = global::RestaurantCsharpSystem.Properties.Resources.dashboard2;
-            this.dashboard_menu.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.dashboard_menu.Location = new System.Drawing.Point(11, 144);
-            this.dashboard_menu.Name = "dashboard_menu";
-            this.dashboard_menu.Size = new System.Drawing.Size(212, 38);
-            this.dashboard_menu.TabIndex = 2;
-            this.dashboard_menu.Text = "Dashboard";
-            this.dashboard_menu.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.dashboard_menu.UseVisualStyleBackColor = false;
-            this.dashboard_menu.Click += new System.EventHandler(this.dashboard_menu_Click);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::RestaurantCsharpSystem.Properties.Resources.juliana_s_ilvia__1_;
-            this.pictureBox4.Location = new System.Drawing.Point(-1, -1);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(200, 139);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
+            this.category_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
+            this.category_menu.FlatAppearance.BorderSize = 0;
+            this.category_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.category_menu.Font = new System.Drawing.Font("Inter", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.category_menu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.category_menu.Image = global::RestaurantCsharpSystem.Properties.Resources.products_icon;
+            this.category_menu.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.category_menu.Location = new System.Drawing.Point(11, 253);
+            this.category_menu.Name = "category_menu";
+            this.category_menu.Size = new System.Drawing.Size(188, 36);
+            this.category_menu.TabIndex = 2;
+            this.category_menu.Text = "Category";
+            this.category_menu.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.category_menu.UseVisualStyleBackColor = false;
+            this.category_menu.Click += new System.EventHandler(this.category_menu_Click);
             // 
             // frmOrders
             // 
@@ -525,8 +545,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmOrders_Load);
             this.menusPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ordersGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ordersGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -564,5 +584,6 @@
         private System.Windows.Forms.ListBox listBoxProducts;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lblCheckQuantity;
+        private System.Windows.Forms.Button category_menu;
     }
 }

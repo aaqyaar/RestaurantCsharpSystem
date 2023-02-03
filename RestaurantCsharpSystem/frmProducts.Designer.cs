@@ -60,6 +60,7 @@
             this.txtSearchProduct = new System.Windows.Forms.TextBox();
             this.cmbCategory = new System.Windows.Forms.ComboBox();
             this.btnGeneralProductsRpt = new System.Windows.Forms.Button();
+            this.category_menu = new System.Windows.Forms.Button();
             this.menusPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsGridView)).BeginInit();
@@ -69,6 +70,7 @@
             // 
             this.menusPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.menusPanel.Controls.Add(this.payroll_menu);
+            this.menusPanel.Controls.Add(this.category_menu);
             this.menusPanel.Controls.Add(this.products_menu);
             this.menusPanel.Controls.Add(this.orders_menu);
             this.menusPanel.Controls.Add(this.employees_menu);
@@ -91,7 +93,7 @@
             this.payroll_menu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.payroll_menu.Image = global::RestaurantCsharpSystem.Properties.Resources.payroll1;
             this.payroll_menu.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.payroll_menu.Location = new System.Drawing.Point(11, 429);
+            this.payroll_menu.Location = new System.Drawing.Point(11, 471);
             this.payroll_menu.Name = "payroll_menu";
             this.payroll_menu.Size = new System.Drawing.Size(188, 36);
             this.payroll_menu.TabIndex = 5;
@@ -102,14 +104,14 @@
             // 
             // products_menu
             // 
-            this.products_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
+            this.products_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(41)))), ((int)(((byte)(55)))));
             this.products_menu.FlatAppearance.BorderSize = 0;
             this.products_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.products_menu.Font = new System.Drawing.Font("Inter", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.products_menu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.products_menu.Image = global::RestaurantCsharpSystem.Properties.Resources.products_icon;
             this.products_menu.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.products_menu.Location = new System.Drawing.Point(11, 258);
+            this.products_menu.Location = new System.Drawing.Point(11, 300);
             this.products_menu.Name = "products_menu";
             this.products_menu.Size = new System.Drawing.Size(188, 36);
             this.products_menu.TabIndex = 2;
@@ -126,7 +128,7 @@
             this.orders_menu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.orders_menu.Image = global::RestaurantCsharpSystem.Properties.Resources.orders_icon;
             this.orders_menu.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.orders_menu.Location = new System.Drawing.Point(11, 316);
+            this.orders_menu.Location = new System.Drawing.Point(11, 358);
             this.orders_menu.Name = "orders_menu";
             this.orders_menu.Size = new System.Drawing.Size(162, 36);
             this.orders_menu.TabIndex = 2;
@@ -144,7 +146,7 @@
             this.employees_menu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.employees_menu.Image = global::RestaurantCsharpSystem.Properties.Resources.employees;
             this.employees_menu.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.employees_menu.Location = new System.Drawing.Point(11, 376);
+            this.employees_menu.Location = new System.Drawing.Point(11, 418);
             this.employees_menu.Name = "employees_menu";
             this.employees_menu.Size = new System.Drawing.Size(217, 36);
             this.employees_menu.TabIndex = 2;
@@ -456,6 +458,24 @@
             this.btnGeneralProductsRpt.UseVisualStyleBackColor = false;
             this.btnGeneralProductsRpt.Click += new System.EventHandler(this.btnGeneralProductsRpt_Click);
             // 
+            // category_menu
+            // 
+            this.category_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
+            this.category_menu.FlatAppearance.BorderSize = 0;
+            this.category_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.category_menu.Font = new System.Drawing.Font("Inter", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.category_menu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.category_menu.Image = global::RestaurantCsharpSystem.Properties.Resources.products_icon;
+            this.category_menu.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.category_menu.Location = new System.Drawing.Point(11, 248);
+            this.category_menu.Name = "category_menu";
+            this.category_menu.Size = new System.Drawing.Size(188, 36);
+            this.category_menu.TabIndex = 2;
+            this.category_menu.Text = "Category";
+            this.category_menu.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.category_menu.UseVisualStyleBackColor = false;
+            this.category_menu.Click += new System.EventHandler(this.category_menu_Click);
+            // 
             // frmProducts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -528,5 +548,6 @@
         private System.Windows.Forms.TextBox txtSearchProduct;
         private System.Windows.Forms.ComboBox cmbCategory;
         private System.Windows.Forms.Button btnGeneralProductsRpt;
+        private System.Windows.Forms.Button category_menu;
     }
 }

@@ -287,5 +287,12 @@ namespace RestaurantCsharpSystem
             frmSearchUserByID frmUserId = new frmSearchUserByID();
             frmUserId.ShowDialog();
         }
+
+        private void category_menu_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new frmCategory().ShowDialog();
+            this.Close();
+        }
     }
 }

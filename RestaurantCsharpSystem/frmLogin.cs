@@ -60,7 +60,6 @@ namespace RestaurantCsharpSystem
                     
                     this.Hide();
                     frmDashboard dash = new frmDashboard();
-                    dash.lblAuthedUser.Text = reader[0].ToString();
                     conn.Close();
                     dash.ShowDialog();
                     this.Close();

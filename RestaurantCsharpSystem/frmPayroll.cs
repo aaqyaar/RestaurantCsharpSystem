@@ -322,5 +322,12 @@ namespace RestaurantCsharpSystem
             frmSearchPayrollByID search = new frmSearchPayrollByID();
             search.ShowDialog();
         }
+
+        private void category_meni_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new frmCategory().ShowDialog();
+            this.Close();
+        }
     }
 }

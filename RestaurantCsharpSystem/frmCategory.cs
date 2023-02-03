@@ -219,6 +219,48 @@ namespace RestaurantCsharpSystem
                 }
             }
         }
+
+        private void user_menu_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new frmUsers().ShowDialog();
+            this.Close();
+        }
+
+        private void dashboard_menu_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new frmDashboard().ShowDialog();
+            this.Close();
+        }
+
+        private void products_menu_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new frmProducts().ShowDialog();
+            this.Close();
+        }
+
+        private void orders_menu_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new frmOrders().ShowDialog();
+            this.Close();
+        }
+
+        private void employees_menu_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new frmEmployees().ShowDialog();
+            this.Close();
+        }
+
+        private void payroll_menu_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new frmPayroll().ShowDialog();
+            this.Close();
+        }
     }
 
 
