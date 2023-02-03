@@ -271,5 +271,16 @@ namespace RestaurantCsharpSystem
             frmGeneralEmployeesRpt rpt = new frmGeneralEmployeesRpt();
             rpt.ShowDialog();
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frmSearchSingleEmployee frmSingleEmp = new frmSearchSingleEmployee();
+            frmSingleEmp.ShowDialog();
+        }
     }
 }

@@ -12,23 +12,25 @@ using RestaurantCsharpSystem.Database;
 
 namespace RestaurantCsharpSystem
 {
-    public partial class frmSearchUserByID : Form
+    public partial class frmSearchSingleEmployee : Form
     {
         SqlConnection conn = DBConnection.conn;
         SqlDataAdapter adapter;
         SqlCommand command;
-        public frmSearchUserByID()
+        public frmSearchSingleEmployee()
         {
             InitializeComponent();
         }
 
         private void btnGeneralRpt_Click(object sender, EventArgs e)
         {
-            if (txtUserId.Text == "") {
-                return;
-            } else
+            if (txtUserId.Text == "")
             {
-                string query = "EXEC sp_getUserByID '"+txtUserId.Text+"'";
+                return;
+            }
+            else
+            {
+                string query = "EXEC sp_getEmployeeByID '" + txtUserId.Text + "'";
                 conn.Open();
                 command = new SqlCommand(query, conn);
                 adapter = new SqlDataAdapter(command);
@@ -38,21 +40,11 @@ namespace RestaurantCsharpSystem
                 rptSingleUserByID rpt = new rptSingleUserByID();
                 rpt.SetDataSource(dataTable);
 
-                frmSingleUserRpt report = new frmSingleUserRpt();
+                frmSingleEmployeeRpt report = new frmSingleEmployeeRpt();
                 report.crystalReportViewer1.ReportSource = rpt;
                 report.ShowDialog();
                 conn.Close();
             }
-        }
-
-        private void txtUserId_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

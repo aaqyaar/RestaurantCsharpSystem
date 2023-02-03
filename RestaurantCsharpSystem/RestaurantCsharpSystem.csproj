@@ -102,6 +102,12 @@
     <Compile Include="frmEmployees.Designer.cs">
       <DependentUpon>frmEmployees.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmForgotPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmForgotPassword.Designer.cs">
+      <DependentUpon>frmForgotPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGeneralEmployeesRpt.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,11 +162,35 @@
     <Compile Include="frmProducts.Designer.cs">
       <DependentUpon>frmProducts.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSearchPayrollByID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSearchPayrollByID.Designer.cs">
+      <DependentUpon>frmSearchPayrollByID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSearchSingleEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSearchSingleEmployee.Designer.cs">
+      <DependentUpon>frmSearchSingleEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSearchUserByID.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmSearchUserByID.Designer.cs">
       <DependentUpon>frmSearchUserByID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSingleEmployeeRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSingleEmployeeRpt.Designer.cs">
+      <DependentUpon>frmSingleEmployeeRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSinglePayrollRpt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSinglePayrollRpt.Designer.cs">
+      <DependentUpon>frmSinglePayrollRpt.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSingleUserRpt.cs">
       <SubType>Form</SubType>
@@ -212,6 +242,18 @@
       <DependentUpon>rptGeneralUsers.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="rptSinglePayrollByID.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSinglePayrollByID.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptSingleEmployeeByID.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSingleEmployeeByID.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="rptSingleUserByID.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -232,6 +274,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmEmployees.resx">
       <DependentUpon>frmEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmForgotPassword.resx">
+      <DependentUpon>frmForgotPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGeneralEmployeesRpt.resx">
       <DependentUpon>frmGeneralEmployeesRpt.cs</DependentUpon>
@@ -260,8 +305,20 @@
     <EmbeddedResource Include="frmProducts.resx">
       <DependentUpon>frmProducts.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmSearchPayrollByID.resx">
+      <DependentUpon>frmSearchPayrollByID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSearchSingleEmployee.resx">
+      <DependentUpon>frmSearchSingleEmployee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSearchUserByID.resx">
       <DependentUpon>frmSearchUserByID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSingleEmployeeRpt.resx">
+      <DependentUpon>frmSingleEmployeeRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSinglePayrollRpt.resx">
+      <DependentUpon>frmSinglePayrollRpt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSingleUserRpt.resx">
       <DependentUpon>frmSingleUserRpt.cs</DependentUpon>
@@ -301,6 +358,14 @@
     <EmbeddedResource Include="rptGeneralUsers.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptGeneralUsers.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptSinglePayrollByID.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSinglePayrollByID.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptSingleEmployeeByID.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSingleEmployeeByID.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="rptSingleUserByID.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

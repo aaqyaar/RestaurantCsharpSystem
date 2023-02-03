@@ -316,5 +316,11 @@ namespace RestaurantCsharpSystem
             frmGeneralPayrollRpt rpt = new frmGeneralPayrollRpt();
             rpt.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmSearchPayrollByID search = new frmSearchPayrollByID();
+            search.ShowDialog();
+        }
     }
 }

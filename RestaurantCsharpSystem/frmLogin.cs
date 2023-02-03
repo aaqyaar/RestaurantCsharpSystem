@@ -81,5 +81,17 @@ namespace RestaurantCsharpSystem
         {
 
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+          
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new frmForgotPassword().ShowDialog();
+            this.Close();
+        }
     }
 }
